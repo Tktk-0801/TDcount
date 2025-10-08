@@ -1,10 +1,9 @@
-# TDcount
 <!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>六つの電卓</title>
+  <title>十二の電卓</title>
   <style>
     :root{
       --bg:#0f172a; --card:#0b1220; --accent:#2563eb; --glass: rgba(255,255,255,0.03);
@@ -62,10 +61,10 @@
   </style>
 </head>
 <body>
-  <h1>六つの電卓 — 同時に使えるシンプルな電卓が6個並んでいます</h1>
+  <h1>十二の電卓 — 同時に使えるシンプルな電卓が12個並んでいます</h1>
 
   <div class="grid" id="grid">
-    <!-- 6 calculators inserted by JS for brevity -->
+    <!-- 12 calculators inserted by JS for brevity -->
   </div>
 
   <footer>キーボードでも操作できます。数字と + - * / Enter (=) Backspace, Esc (C)。</footer>
@@ -172,9 +171,9 @@
       }
     }
 
-    // create 6 calculators
+    // create 12 calculators
     const grid = document.getElementById('grid');
-    for(let i=1;i<=6;i++){
+    for(let i=1;i<=12;i++){
       const wrapper = document.createElement('div'); wrapper.className='calc-wrap';
       grid.appendChild(wrapper);
       new MiniCalc(wrapper, i);
@@ -204,7 +203,7 @@
     // re-create to attach references properly
     grid.innerHTML='';
     const calcs = [];
-    for(let i=1;i<=6;i++){
+    for(let i=1;i<=12;i++){
       const wrapper = document.createElement('div'); wrapper.className='calc-wrap';
       grid.appendChild(wrapper);
       const inst = new MiniCalc(wrapper, i);
